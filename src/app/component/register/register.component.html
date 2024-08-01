@@ -1,0 +1,43 @@
+<mat-card class="reg-card">
+  <mat-card-header>
+    <mat-card-title style="color: #4db983; padding-left: 65px; font-size: 28px;">Register</mat-card-title>
+  </mat-card-header>
+  <mat-card-content  class="right-cont">
+    <mat-label> Already Have an Account?</mat-label>
+    <a routerLink="/login" style="color: #4db983;"> Log In</a>
+
+    <form class="form-card">
+      <div class="names">
+        <div>
+          <label for="firstname">First Name</label>
+          <input type="name" name="firstname" class="nameInput">
+        </div>
+        <div>
+          <label for="lastname">Last Name</label>
+          <input type="name" name="lastname" class="nameInput">
+        </div>
+      </div>
+
+      <div>
+        <label for="email">Email ID</label>
+        <input type="email" name="email" class="input">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" class="input">
+      </div>
+      <div>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" name="confirmPassword" class="input">
+      </div>
+
+      <button mat-raised-button color="primary" style="background-color: #4db983;" (click)="register()" class="btn">Sign Up</button>
+
+      <button class="social-buttons" (click)="googleORGitSignIn(true)">
+        <img src="../../../assets/google.svg" alt="google" height="24" width="24">
+        <div>Sign in with Google</div>
+      </button>
+    </form>
+    
+  </mat-card-content>
+</mat-card>

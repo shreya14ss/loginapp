@@ -1,0 +1,37 @@
+<mat-card class="login-card">
+  <mat-card-header>
+    <mat-card-title style="color: #4db983; padding-left: 65px; font-size: 28px;">Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="right-cont">
+    <mat-label>Are You New User?</mat-label>
+    <a routerLink="/register" style="color: #4db983;"> Sign Up</a>
+    <br>
+    <form class="form-card">
+      <div>
+        <label for="email">Email ID</label>
+        <input type="email" name="email" id="email" [(ngModel)]="this.email" class="input">
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" [(ngModel)]="this.password" class="input">
+      </div>
+
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          <input type="checkbox" id="remember" name="check" [(ngModel)]="isChecked">&nbsp;Remember Me
+        </div>
+        <a routerLink="/resetpassword">Forgot Password?</a>
+      </div>
+
+      <button mat-raised-button color="primary" style="background-color: #4db983;" (click)="login()" class="btn">Sign In</button>
+
+      <button class="social-buttons" (click)="googleORGitSignIn(true)">
+        <img src="../../../assets/google.svg" alt="google" height="24" width="24">
+        <div>Sign in with Google</div>
+      </button>
+    </form>
+
+
+  </mat-card-content>
+</mat-card>
